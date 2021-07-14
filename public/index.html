@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+    <link rel="styleSheet" href="./css/index.css"/>
+</head>
+<body>
+    <header class="navBar">
+        <div id="left">
+            <a href="index.html">Home</a>
+        </div>
+        <div id="right">
+            <button onclick="openLogin()">login</button>
+        </div>
+
+
+    </header>
+    <div id="searchBar">
+        <input id="searchInput" placeholder="Search..."></input>
+        <button onclick="onSearch()">Search</button>
+    </div>
+
+    <main  id="startImageContain">
+        <div id="modal" style="display: none;">
+            <input></input>
+            <br>
+            <input></input>
+            <br>
+            <button>Enter</button>
+            <button onclick="">create account</button>
+
+        </div>
+
+        <div id="createAccountModal">
+            <input></input>
+            <input></input>
+            <a>login</a>
+
+        </div>
+
+    </main>
+
+    
+    <script src="js/index.js"></script>
+</body>
+</html>
