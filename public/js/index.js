@@ -73,11 +73,12 @@ function fetchCall(searchItem){
                 'Content-Type': 'application/json'
               },
         }).then(res => {
-            
-            if(res.status === 200){
-                
-            }
-            
+            return res.json()
+           
+        }).then(data => {
+            console.log(data)
+            localStorage.setItem("token", data)
+           window.location.href = "/userdata"
         })
     }
 
