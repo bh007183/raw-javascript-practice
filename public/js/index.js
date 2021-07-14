@@ -42,18 +42,45 @@ function fetchCall(searchItem){
     fetchCall("moon")
 
     function onSearch(){
-        
         document.querySelector("#startImageContain").innerHTML = ''
         fetchCall(document.querySelector("#searchInput").value)
-
     }
 
     function openLogin(){
-        
         document.querySelector('#modal').removeAttribute("style")
-        
+    }
+    function createAccount(){
+        document.querySelector('#modal').setAttribute("style", "display: none")
+        document.querySelector('#createAccountModal').removeAttribute("style")
+    }
+    function backToLogin(){
+        document.querySelector('#createAccountModal').setAttribute("style", "display: none")
+        document.querySelector('#modal').removeAttribute("style")
     }
 
-    // <a href="#" class="btn btn-primary">Go somewhere</a>
+    function createAccountFetch(){
+        const obj = {
+            username: document.querySelector("#createAccountUsername").value,
+            password: document.querySelector("#createAccountPassword").value
+        }
+        console.log(obj)
+
+        fetch("/api/createAccount",{
+            method: "POST",
+            body: JSON.stringify(obj),
+            headers: {
+                // 'Accept': 'application/json',
+                'Content-Type': 'application/json'
+              },
+        }).then(res => {
+            
+            if(res.status === 200){
+                
+            }
+            
+        })
+    }
+
+    
     
 

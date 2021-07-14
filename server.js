@@ -8,12 +8,15 @@ app.use(express.static("public"))
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 
+app.use(require("./routes"))
+
 db.sequelize.sync({force: false}).then(function(){
     app.listen(PORT, ()=> {
         console.log("http://localhost:8080")
     })
 
 })
+
     
 
 

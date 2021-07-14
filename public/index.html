@@ -25,20 +25,28 @@
 
     <main  id="startImageContain">
         <div id="modal" style="display: none;">
-            <input></input>
             <br>
-            <input></input>
+            <input placeholder="username"></input>
+            <br>
+            <input placeholder="password"></input>
             <br>
             <button>Enter</button>
-            <button onclick="">create account</button>
-
+            <br>
+            <button onclick="createAccount()">create account</button>
+            <br>
         </div>
 
-        <div id="createAccountModal">
-            <input></input>
-            <input></input>
-            <a>login</a>
+        <div id="createAccountModal" style="display: none;">
+            <br>
+            <input id="createAccountUsername" placeholder="username"></input>
+            <br>
+            <input id="createAccountPassword"placeholder="password"></input>
+            <br>
+            <button onclick="createAccountFetch()">Create Account</button>
+            <br>
+            <button onclick="backToLogin()">back to login</button>
 
+            <br>
         </div>
 
     </main>
