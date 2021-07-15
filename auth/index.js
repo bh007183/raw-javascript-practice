@@ -24,7 +24,9 @@ module.exports = {
         }else{
             token = req.headers.authorization.split(" ")[1]
         }
-        if(!token){
+        if(!token || token === "null"){
+
+            console.log(false)
             return false
         }else{
             return token

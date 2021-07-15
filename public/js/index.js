@@ -76,9 +76,12 @@ function fetchCall(searchItem){
             return res.json()
            
         }).then(data => {
-            console.log(data)
+            
             localStorage.setItem("token", data)
-           window.location.href = "/userdata"
+            window.location.href = "/user"
+            
+        }).catch(err => {
+            console.log(err)
         })
     }
 
